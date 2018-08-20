@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 8080
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
+app.use(cors())
 app.use(bodyParser.json())
 
 let counter = 0
